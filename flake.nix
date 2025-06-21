@@ -1,7 +1,7 @@
 {
   description = "DS9 binary flake";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
   outputs = { self, nixpkgs, flake-utils }:
@@ -19,7 +19,7 @@
       in {
         packages.default = pkgs.stdenv.mkDerivation {
           pname = "ds9";
-          version = "8.4";
+          version = "8.7b1";
 
           src = ./ds9;  # 直接引用裸二进制文件
           dontUnpack = true;
