@@ -14,7 +14,7 @@
           pkgs.xorg.libXft
           (pkgs.lib.getLib pkgs.gcc.cc)
           pkgs.fontconfig.lib
-          pkgs.libxml2
+          pkgs.libxml2_13
         ];
       in {
         packages.default = pkgs.stdenv.mkDerivation {
@@ -36,12 +36,12 @@
           '';
 
           buildInputs = [
-            pkgs.xorg.libX11
+            pkgs.xorg.libX11.all
             pkgs.xorg.libXScrnSaver
-            pkgs.xorg.libXft
+            pkgs.xorg.libXft.all
             (pkgs.lib.getLib pkgs.gcc.cc)
             pkgs.fontconfig.lib
-            pkgs.libxml2
+            pkgs.libxml2_13.all
           ];
         };
       }
